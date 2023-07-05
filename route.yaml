@@ -6,7 +6,7 @@ metadata:
   labels:
     app: nodejs-sample
 spec:
-  host: nodejs-sample-demo-gitops.apps.ocp.netlabs.com.uy
+  host: nodejs-sample-demo-gitops.apps.cl-desa.bse.com.uy
   to:
     kind: Service
     name: nodejs-sample
