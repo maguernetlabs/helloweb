@@ -20,7 +20,7 @@ spec:
       containers:
         - name: nodejs-sample
           image: >-
-            mgaribotti/ocp-demo-app-nodejs
+            mgaribotti/ocp-demo-app-nodejs:1.0
           ports:
             - containerPort: 8081
               protocol: TCP
