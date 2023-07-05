@@ -34,7 +34,7 @@ spec:
       containers:
         - name: httpd-sample
           image: >-
-            httpd:2.4.57
+            simple-web:latest
           ports:
             - containerPort: 80
               protocol: TCP
