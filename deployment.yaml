@@ -34,7 +34,7 @@ spec:
       containers:
         - name: httpd-sample
           image: >-
-            simple-web:latest
+            https://registry.hub.docker.com/u/yeasy/simple-web
           ports:
             - containerPort: 80
               protocol: TCP
