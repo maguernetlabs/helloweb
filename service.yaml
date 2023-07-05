@@ -1,33 +1,19 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: httpd-sample
+  name: nodejs-sample
   namespace: demo-gitops
   labels:
-    app: httpd-sample
-    app.kubernetes.io/component: httpd-sample
-    app.kubernetes.io/instance: httpd-sample
-    app.kubernetes.io/name: httpd-sample
-    app.kubernetes.io/part-of: sample-app
-    app.openshift.io/runtime: httpd
-    app.openshift.io/runtime-version: 2.4-el7
-  annotations:
-    app.openshift.io/vcs-ref: ''
-    app.openshift.io/vcs-uri: 'https://github.com/sclorg/httpd-ex.git'
-    openshift.io/generated-by: OpenShiftWebConsole
+    app: nodejs-sample
 spec:
   ports:
     - name: 8080-tcp
       protocol: TCP
       port: 8080
-      targetPort: 8080
-    - name: 8443-tcp
-      protocol: TCP
-      port: 8443
-      targetPort: 8443
+      targetPort: 8081
   selector:
-    app: httpd-sample
-    deploymentconfig: httpd-sample
+    app: nodejs-sample
+    deploymentconfig: nodejs-sample
   type: ClusterIP
   sessionAffinity: None
   ipFamilies:
