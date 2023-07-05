@@ -1,0 +1,24 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: httpd-sample
+  namespace: demo-gitops
+  labels:
+    app: httpd-sample
+    app.kubernetes.io/component: httpd-sample
+    app.kubernetes.io/instance: httpd-sample
+    app.kubernetes.io/name: httpd-sample
+    app.kubernetes.io/part-of: sample-app
+    app.openshift.io/runtime: httpd
+    app.openshift.io/runtime-version: 2.4-el7
+  annotations:
+    openshift.io/host.generated: 'true'
+spec:
+  host: httpd-sample-demo-gitops.apps.ocp.netlabs.com.uy
+  to:
+    kind: Service
+    name: httpd-sample
+    weight: 100
+  port:
+    targetPort: 8080-tcp
+  wildcardPolicy: None
