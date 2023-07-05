@@ -34,7 +34,7 @@ spec:
       containers:
         - name: httpd-sample
           image: >-
-            image-registry.openshift-image-registry.svc:5000/demo-gitops/httpd-sample@sha256:f199132b2195d4c0fe2d7a68cefe3704515538be3bb11f9820e7f329b3dd3934
+            image-registry.openshift-image-registry.svc:5000/demo-gitops/httpd-sample:latest
           ports:
             - containerPort: 8080
               protocol: TCP
