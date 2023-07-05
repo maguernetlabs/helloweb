@@ -28,9 +28,6 @@ spec:
   selector:
     app: httpd-sample
     deploymentconfig: httpd-sample
-  clusterIP: 172.30.208.93
-  clusterIPs:
-    - 172.30.208.93
   type: ClusterIP
   sessionAffinity: None
   ipFamilies:
